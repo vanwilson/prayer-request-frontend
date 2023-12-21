@@ -1,24 +1,25 @@
+import axios from "axios";
+import { useState, useEffect } from "react";
 import { PrayersIndex } from "./PrayersIndex";
 import { PrayersNew } from "./PrayersNew";
 
 export function Content() {
-  let prayer = [
-    {
-      id: 1,
-      name: "Van Wilson",
-      request: "Job search",
-    },
-    {
-      id: 2,
-      name: "Zion Wilson",
-      request: "Get over this cold.",
-    },
-  ];
+  const [prayers, setPrayers] = useState([]);
+
+  const handleIndexPrayers = () => {
+    console.log("handleIndexPrayers");
+    axios.get("http://localhost:3000/prayers.json").then((response) => {
+      console.log(response.data);
+      setPrayers(response.data);
+    });
+  };
+
+  useEffect(handleIndexPrayers, []);
 
   return (
     <div>
       <PrayersNew />
-      <PrayersIndex prayers={prayer} />
+      <PrayersIndex prayers={prayers} />
     </div>
   );
 }
