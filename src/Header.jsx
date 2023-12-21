@@ -1,3 +1,5 @@
+import { LogoutLink } from "./LogoutLink";
+
 export function Header() {
   return (
     <header>
@@ -23,6 +25,9 @@ export function Header() {
                 <a className="nav-link active" aria-current="page" href="#">
                   Home
                 </a>
+              </li>
+              <li className="nav-item">
+                <LogoutLink />
               </li>
               {/* <li className="nav-item">
                 <a className="nav-link" href="#">

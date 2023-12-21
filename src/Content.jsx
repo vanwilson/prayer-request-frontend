@@ -2,6 +2,8 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { PrayersIndex } from "./PrayersIndex";
 import { PrayersNew } from "./PrayersNew";
+import { Signup } from "./Signup";
+import { Login } from "./Login";
 
 export function Content() {
   const [prayers, setPrayers] = useState([]);
@@ -18,6 +20,8 @@ export function Content() {
 
   return (
     <div>
+      <Signup />
+      <Login />
       <PrayersNew />
       <PrayersIndex prayers={prayers} />
     </div>

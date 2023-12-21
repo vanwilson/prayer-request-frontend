@@ -1,6 +1,7 @@
 export function PrayersNew() {
   return (
     <div id="prayers-new">
+      <h1>New Prayer Request</h1>
       <div className="row g-3 align-items-center">
         <div className="col-auto">
           <label htmlFor="inputPassword6" className="col-form-label">
