@@ -9,22 +9,27 @@ export function PrayersIndex(props) {
         {props.prayers.map((prayer) => (
           <div key={prayer.id}>
             <div className="card">
-              <div className="card-header" id="headingOne">
-                <h5 className="mb-0">
-                  <button
-                    className="btn"
-                    data-toggle="collapse"
-                    data-target="#collapseOne"
-                    aria-expanded="true"
-                    aria-controls="collapseOne"
-                  >
+              <button
+                className="btn collapsed"
+                data-toggle="collapse"
+                data-target="#collapseOne"
+                aria-expanded="false"
+                aria-controls="collapseOne"
+              >
+                <div className="card-header">
+                  <h5 className="mb-0">
                     <div className="row row-cols-3">
-                      <h2>{prayer.pray_for}</h2>
+                      <p>{prayer.pray_for}</p>
                       <p>{prayer.title}</p>
                       <p>{prayer.prayer_type}</p>
                     </div>
-                  </button>
-                </h5>
+                  </h5>
+                </div>
+              </button>
+              <div id="collapseOne" className="collapse show" aria-labelledby="heading" data-parent="#accordion">
+                <div className="card-body">
+                  <p>{prayer.body}</p>
+                </div>
               </div>
             </div>
           </div>
