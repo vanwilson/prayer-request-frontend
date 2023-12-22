@@ -18,10 +18,11 @@ export function PrayersIndex(props) {
               >
                 <div className="card-header">
                   <h5 className="mb-0">
-                    <div className="row row-cols-3">
+                    <div className="row row-cols-4">
                       <p>{prayer.pray_for}</p>
                       <p>{prayer.title}</p>
                       <p>{prayer.prayer_type}</p>
+                      <button onClick={() => props.onShowPrayer(prayer)}>Edit</button>
                     </div>
                   </h5>
                 </div>
