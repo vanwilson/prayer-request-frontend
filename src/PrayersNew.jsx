@@ -1,32 +1,29 @@
-export function PrayersNew() {
+export function PrayersNew(props) {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const params = new FormData(event.target);
+    props.onCreatePrayer(params, () => event.target.reset());
+    window.location.href = "/";
+  };
+
   return (
     <div id="prayers-new">
       <h1>New Prayer Request</h1>
-      <div className="row g-3 align-items-center">
-        <div className="col-auto">
-          <label htmlFor="inputPassword6" className="col-form-label">
-            Title
-          </label>
+      <form onSubmit={handleSubmit}>
+        <div>
+          Pray for: <input name="pray_for" type="text" required />
         </div>
-        <div className="col-auto">
-          <input type="password" id="inputPassword6" className="form-control" aria-describedby="passwordHelpInline" />
+        <div>
+          Title: <input name="title" type="text" required />
         </div>
-        <div className="col-auto">
-          <span id="passwordHelpInline" className="form-text">
-            Your prayer within 6 words.
-          </span>
+        <div>
+          Prayer type: <input name="prayer_type" type="text" required />
         </div>
-      </div>
-      <div className="row g-3 align-items-center">
-        <div className="col-auto">
-          <label htmlFor="inputPassword6" className="col-form-label">
-            Body
-          </label>
+        <div>
+          Body: <input name="body" type="text" required />
         </div>
-        <div className="col-auto">
-          <input type="password" id="inputPassword6" className="form-control" aria-describedby="passwordHelpInline" />
-        </div>
-      </div>
+        <button type="submit">Submit</button>
+      </form>
     </div>
   );
 }

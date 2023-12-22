@@ -16,13 +16,21 @@ export function Content() {
     });
   };
 
+  const handleCreatePrayer = (params, successCallback) => {
+    console.log("handleCreatePrayer", params);
+    axios.post("http://localhost:3000/prayers.json", params).then((response) => {
+      setPrayers([...prayers, response.data]);
+      successCallback();
+    });
+  };
+
   useEffect(handleIndexPrayers, []);
 
   return (
     <div>
       <Signup />
       <Login />
-      <PrayersNew />
+      <PrayersNew onCreatePrayer={handleCreatePrayer} />
       <PrayersIndex prayers={prayers} />
     </div>
   );
