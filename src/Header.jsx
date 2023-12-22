@@ -27,13 +27,18 @@ export function Header() {
                 </a>
               </li>
               <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Answered Prayers
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  My Prayers
+                </a>
+              </li>
+              <li className="nav-item">
                 <LogoutLink />
               </li>
-              {/* <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Link
-                </a>
-              </li> */}
               {/* <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"

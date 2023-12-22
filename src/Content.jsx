@@ -33,6 +33,23 @@ export function Content() {
     setCurrentPrayer(prayer);
   };
 
+  const handleUpdatePrayer = (id, params, successCallback) => {
+    console.log("handleUpdatePrayer", params);
+    axios.patch(`http://localhost:3000/prayers/${id}.json`, params).then((response) => {
+      setPrayers(
+        prayers.map((prayer) => {
+          if (prayer.id === response.data.id) {
+            return response.data;
+          } else {
+            return prayer;
+          }
+        })
+      );
+      successCallback();
+      handleClose();
+    });
+  };
+
   const handleClose = () => {
     console.log("handleClose");
     setIsPrayerShowVisible(false);
@@ -47,7 +64,7 @@ export function Content() {
       <PrayersNew onCreatePrayer={handleCreatePrayer} />
       <PrayersIndex prayers={prayers} onShowPrayer={handleShowPrayer} />
       <Modal show={isPrayerShowVisible} onClose={handleClose}>
-        <PrayerShow prayer={currentPrayer} />
+        <PrayerShow prayer={currentPrayer} onUpdatePrayer={handleUpdatePrayer} />
       </Modal>
     </div>
   );
