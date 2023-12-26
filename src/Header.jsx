@@ -27,17 +27,19 @@ export function Header() {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link active" href="#">
                   Answered Prayers
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link active" href="#">
                   My Prayers
                 </a>
               </li>
               <li className="nav-item">
-                <LogoutLink />
+                <a className="nav-link active" href="#">
+                  <LogoutLink />
+                </a>
               </li>
               {/* <li className="nav-item dropdown">
                 <a
@@ -74,12 +76,12 @@ export function Header() {
                 <a className="nav-link disabled">Disabled</a>
               </li> */}
             </ul>
-            <form className="d-flex" role="search">
+            {/* <form className="d-flex" role="search">
               <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
               <button className="btn btn-outline-success" type="submit">
                 Search
               </button>
-            </form>
+            </form> */}
           </div>
         </div>
       </nav>
