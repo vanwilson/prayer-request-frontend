@@ -32,7 +32,7 @@ export function Header() {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link active" href="#">
+                <a className="nav-link active" href="/my_prayers">
                   My Prayers
                 </a>
               </li>
