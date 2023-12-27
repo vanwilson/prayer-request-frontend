@@ -27,7 +27,7 @@ export function Header() {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link active" href="#">
+                <a className="nav-link active" href="/prayers_answered">
                   Answered Prayers
                 </a>
               </li>

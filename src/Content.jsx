@@ -6,6 +6,7 @@ import { Modal } from "./Modal";
 import { PrayerShow } from "./PrayerShow";
 import { MyPrayers } from "./MyPrayers";
 import { Home } from "./Home";
+import { PrayersAnswered } from "./PrayersAnswered";
 
 export function Content() {
   const [prayers, setPrayers] = useState([]);
@@ -58,7 +59,8 @@ export function Content() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Prayers" element={<PrayersIndex prayers={prayers} onShowPrayer={handleShowPrayer} />} />
-        <Route path="/my_prayers" element={<MyPrayers />} />
+        <Route path="/my_prayers" element={<MyPrayers prayers={prayers} onShowPrayer={handleShowPrayer} />} />
+        <Route path="/prayers_answered" element={<PrayersAnswered />} />
       </Routes>
     </div>
   );
