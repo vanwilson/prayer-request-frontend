@@ -1,12 +1,28 @@
 /* eslint-disable react/prop-types */
+import { useState, useEffect } from "react";
+import axios from "axios";
+
 export function MyPrayers(props) {
   console.log(props);
+
+  const [prayers, setPrayers] = useState([]);
+
+  const handleMyPrayers = () => {
+    console.log("handleMyPrayers");
+    let user_id = localStorage.getItem("user_id");
+    axios.get(`http://localhost:3000/prayers.json?id=${user_id}`).then((response) => {
+      console.log(response.data);
+      setPrayers(response.data);
+    });
+  };
+
+  useEffect(handleMyPrayers, []);
 
   return (
     <div id="my-prayers">
       <h1>My Prayers</h1>
       <div id="accordion" className="prayers">
-        {props.prayers.map((prayer) => (
+        {prayers.map((prayer) => (
           <div key={prayer.id}>
             <div className="card">
               <button
