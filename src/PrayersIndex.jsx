@@ -1,9 +1,25 @@
 /* eslint-disable react/prop-types */
+import axios from "axios";
+import { useState } from "react";
+import { PrayersNew } from "./PrayersNew";
+
 export function PrayersIndex(props) {
+  const [prayers, setPrayers] = useState([]);
   console.log(props);
+
+  const handleCreatePrayer = (params, successCallback) => {
+    console.log("handleCreatePrayer", params);
+    axios.post("http://localhost:3000/prayers.json", params).then((response) => {
+      setPrayers([...prayers, response.data]);
+      successCallback();
+    });
+  };
 
   return (
     <div id="prayers-index">
+      <div>
+        <PrayersNew onCreatePrayer={handleCreatePrayer} />
+      </div>
       <h1>Prayers</h1>
       <div id="accordion" className="prayers">
         {props.prayers.map((prayer) => (

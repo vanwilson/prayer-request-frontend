@@ -2,7 +2,6 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { PrayersIndex } from "./PrayersIndex";
-import { PrayersNew } from "./PrayersNew";
 import { Modal } from "./Modal";
 import { PrayerShow } from "./PrayerShow";
 import { MyPrayers } from "./MyPrayers";
@@ -18,14 +17,6 @@ export function Content() {
     axios.get("http://localhost:3000/prayers.json").then((response) => {
       console.log(response.data);
       setPrayers(response.data);
-    });
-  };
-
-  const handleCreatePrayer = (params, successCallback) => {
-    console.log("handleCreatePrayer", params);
-    axios.post("http://localhost:3000/prayers.json", params).then((response) => {
-      setPrayers([...prayers, response.data]);
-      successCallback();
     });
   };
 
@@ -61,7 +52,6 @@ export function Content() {
 
   return (
     <div>
-      <PrayersNew onCreatePrayer={handleCreatePrayer} />
       <Modal show={isPrayerShowVisible} onClose={handleClose}>
         <PrayerShow prayer={currentPrayer} onUpdatePrayer={handleUpdatePrayer} />
       </Modal>
