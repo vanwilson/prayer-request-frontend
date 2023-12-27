@@ -9,7 +9,7 @@ export function PrayersAnswered(props) {
 
   const handlePrayersAnswered = () => {
     console.log("handlePrayersAnswered");
-    axios.get(`http://localhost:3000/prayers.json?prayer_type=Answered`).then((response) => {
+    axios.get(`http://localhost:3000/prayers.json?prayer_type=answered`).then((response) => {
       console.log(response.data);
       setPrayers(response.data);
     });
@@ -19,7 +19,7 @@ export function PrayersAnswered(props) {
 
   return (
     <div id="my-prayers">
-      <h1>My Prayers</h1>
+      <h1>Answered Prayers</h1>
       <div id="accordion" className="prayers">
         {prayers.map((prayer) => (
           <div key={prayer.id}>
