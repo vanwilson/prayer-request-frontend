@@ -20,7 +20,7 @@ export function PrayersIndex(props) {
       <div>
         <PrayersNew onCreatePrayer={handleCreatePrayer} />
       </div>
-      <h1>Prayers</h1>
+      <h1>Prayer Requests</h1>
       <div id="accordion" className="prayers">
         {props.prayers.map((prayer) => (
           <div key={prayer.id}>

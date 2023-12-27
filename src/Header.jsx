@@ -6,7 +6,7 @@ export function Header() {
       <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
           <a className="navbar-brand" href="/prayers">
-            Prayer Requests
+            Prayer
           </a>
           <button
             className="navbar-toggler"
@@ -76,12 +76,12 @@ export function Header() {
                 <a className="nav-link disabled">Disabled</a>
               </li> */}
             </ul>
-            <form className="d-flex" role="search">
+            {/* <form className="d-flex" role="search">
               <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
               <button className="btn btn-outline-success" type="submit">
                 Search
               </button>
-            </form>
+            </form> */}
           </div>
         </div>
       </nav>
