@@ -1,11 +1,39 @@
 /* eslint-disable react/prop-types */
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { PrayersNew } from "./PrayersNew";
 
 export function PrayersIndex(props) {
   const [prayers, setPrayers] = useState([]);
-  console.log(props);
+  const [selectedPrayerType, setSelectedPrayerType] = useState("All");
+  const [filteredPrayers, setFilteredPrayers] = useState(props.prayers);
+
+  const prayer_types = Array.from(new Set(props.prayers.map((prayers) => prayers.prayer_type)));
+
+  const filterByPrayerType = (prayer_type) => {
+    setSelectedPrayerType(prayer_type);
+    if (prayer_type === "All") {
+      setFilteredPrayers(props.prayers);
+    } else {
+      setFilteredPrayers(
+        props.prayers.filter((prayer) => {
+          return prayer.prayer_type === prayer_type;
+        })
+      );
+    }
+  };
+
+  useEffect(() => {
+    if (selectedPrayerType === "All") {
+      setFilteredPrayers(props.prayers);
+    } else {
+      setFilteredPrayers(
+        props.prayers.filter((prayer) => {
+          return prayer.prayer_type === selectedPrayerType;
+        })
+      );
+    }
+  }, [selectedPrayerType, props.prayers]);
 
   const handleCreatePrayer = (params, successCallback) => {
     console.log("handleCreatePrayer", params);
@@ -21,8 +49,14 @@ export function PrayersIndex(props) {
         <PrayersNew onCreatePrayer={handleCreatePrayer} />
       </div>
       <h1>Prayer Requests</h1>
+      <select value={selectedPrayerType} onChange={(e) => filterByPrayerType(e.target.value)}>
+        <option value="All">All prayer types</option>
+        {prayer_types.map((prayer_type) => {
+          return <option key={prayer_type}>{prayer_type}</option>;
+        })}
+      </select>
       <div id="accordion" className="prayers">
-        {props.prayers.map((prayer) => (
+        {filteredPrayers.map((prayer) => (
           <div key={prayer.id}>
             <div className="card">
               <button
@@ -38,7 +72,7 @@ export function PrayersIndex(props) {
                       <p>{prayer.pray_for}</p>
                       <p>{prayer.title}</p>
                       <p>{prayer.prayer_type}</p>
-                      <button onClick={() => props.onShowPrayer(prayer)}>Edit</button>
+                      {/* <button onClick={() => props.onShowPrayer(prayer)}>Edit</button> */}
                     </div>
                   </h5>
                 </div>

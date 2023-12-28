@@ -26,11 +26,11 @@ export function Header() {
                   Home
                 </a>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <a className="nav-link active" href="/prayers_answered">
                   Answered Prayers
                 </a>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <a className="nav-link active" href="/my_prayers">
                   My Prayers
