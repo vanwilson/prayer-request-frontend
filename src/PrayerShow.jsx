@@ -4,6 +4,7 @@ export function PrayerShow(props) {
     event.preventDefault();
     const params = new FormData(event.target);
     props.onUpdatePrayer(props.prayer.id, params, () => event.target.reset());
+    window.location.href = "/my_prayers";
   };
 
   return (
