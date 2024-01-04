@@ -13,21 +13,17 @@ export function Content() {
   const [currentPrayer, setCurrentPrayer] = useState({});
 
   const handleIndexPrayers = () => {
-    console.log("handleIndexPrayers");
     axios.get("http://localhost:3000/prayers.json").then((response) => {
-      console.log(response.data);
       setPrayers(response.data);
     });
   };
 
   const handleShowPrayer = (prayer) => {
-    console.log("handleShowPrayer", prayer);
     setIsPrayerShowVisible(true);
     setCurrentPrayer(prayer);
   };
 
   const handleUpdatePrayer = (id, params, successCallback) => {
-    console.log("handleUpdatePrayer", params);
     axios.patch(`http://localhost:3000/prayers/${id}.json`, params).then((response) => {
       setPrayers(
         prayers.map((prayer) => {
@@ -44,7 +40,6 @@ export function Content() {
   };
 
   const handleClose = () => {
-    console.log("handleClose");
     setIsPrayerShowVisible(false);
   };
 

@@ -36,7 +36,6 @@ export function PrayersIndex(props) {
   }, [selectedPrayerType, props.prayers]);
 
   const handleCreatePrayer = (params, successCallback) => {
-    console.log("handleCreatePrayer", params);
     axios.post("http://localhost:3000/prayers.json", params).then((response) => {
       setPrayers([...prayers, response.data]);
       successCallback();
@@ -72,7 +71,6 @@ export function PrayersIndex(props) {
                       <p>{prayer.pray_for}</p>
                       <p>{prayer.title}</p>
                       <p>{prayer.prayer_type}</p>
-                      {/* <button onClick={() => props.onShowPrayer(prayer)}>Edit</button> */}
                     </div>
                   </h5>
                 </div>
