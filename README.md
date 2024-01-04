@@ -16,7 +16,10 @@ git clone https://github.com/vanwilson/prayer-request-app
 ## Usage
 
 ```bash
+cd prayer-request-app
+npm install
 npm run dev
+npm install axios --save
 ```
 
 ## Roadmap
