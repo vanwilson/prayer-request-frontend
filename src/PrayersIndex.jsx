@@ -43,47 +43,51 @@ export function PrayersIndex(props) {
   };
 
   return (
-    <div id="prayers-index">
-      <div>
-        <PrayersNew onCreatePrayer={handleCreatePrayer} />
-      </div>
-      <h1>Prayer Requests</h1>
-      <select value={selectedPrayerType} onChange={(e) => filterByPrayerType(e.target.value)}>
-        <option value="All">All prayer types</option>
-        {prayer_types.map((prayer_type) => {
-          return <option key={prayer_type}>{prayer_type}</option>;
-        })}
-      </select>
-      <div id="accordion" className="prayers">
-        {filteredPrayers.map((prayer) => (
-          <div key={prayer.id}>
-            <div className="card">
-              <button
-                className="btn collapsed"
-                data-toggle="collapse"
-                data-target="#collapseOne"
-                aria-expanded="false"
-                aria-controls="collapseOne"
-              >
-                <div className="card-header">
-                  <h5 className="mb-0">
-                    <div className="row row-cols-4">
-                      <p>{prayer.pray_for}</p>
-                      <p>{prayer.title}</p>
-                      <p>{prayer.prayer_type}</p>
-                    </div>
-                  </h5>
-                </div>
-              </button>
-              <div id="collapseOne" className="collapse show" aria-labelledby="heading" data-parent="#accordion">
-                <div className="card-body">
-                  <p>{prayer.body}</p>
+    <>
+      <div id="prayers-index">
+        <div>
+          <PrayersNew onCreatePrayer={handleCreatePrayer} />
+        </div>
+        <h1>Prayer Requests</h1>
+        <select value={selectedPrayerType} onChange={(e) => filterByPrayerType(e.target.value)}>
+          <option value="All">All prayer types</option>
+          {prayer_types.map((prayer_type) => {
+            return <option key={prayer_type}>{prayer_type}</option>;
+          })}
+        </select>
+        <div className="accordion accordion-flush" id="accordionExample">
+          {filteredPrayers.map((prayer) => (
+            <div key={prayer.id}>
+              <div className="accordion-item">
+                <h2 className="accordion-header" id={`heading-prayer-${prayer.id}`}>
+                  <button
+                    className="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target={`#collapse-prayer-${prayer.id}`}
+                    aria-expanded="false"
+                    aria-controls={`collapse-prayer-${prayer.id}`}
+                  >
+                    <p>{prayer.pray_for}</p>
+                    <p>{prayer.title}</p>
+                    <p>{prayer.prayer_type}</p>
+                  </button>
+                </h2>
+                <div
+                  id={`collapse-prayer-${prayer.id}`}
+                  className="accordion-collapse collapse"
+                  aria-labelledby={`collapse-prayer-${prayer.id}`}
+                  data-bs-parent="#accordionExample"
+                >
+                  <div className="accordion-body">
+                    <p>{prayer.body}</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
