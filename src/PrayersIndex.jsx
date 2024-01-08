@@ -60,18 +60,25 @@ export function PrayersIndex(props) {
             <div key={prayer.id}>
               <div className="accordion-item">
                 <h2 className="accordion-header" id={`heading-prayer-${prayer.id}`}>
-                  <button
-                    className="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target={`#collapse-prayer-${prayer.id}`}
-                    aria-expanded="false"
-                    aria-controls={`collapse-prayer-${prayer.id}`}
-                  >
-                    <p>{prayer.pray_for}</p>
-                    <p>{prayer.title}</p>
-                    <p>{prayer.prayer_type}</p>
-                  </button>
+                  <div className="card">
+                    <button
+                      className="accordion-button collapsed"
+                      data-bs-toggle="collapse"
+                      data-bs-target={`#collapse-prayer-${prayer.id}`}
+                      aria-expanded="false"
+                      aria-controls={`collapse-prayer-${prayer.id}`}
+                    >
+                      <div className="card-header">
+                        <h5 className="mb-0">
+                          <div className="row row-cols-4">
+                            <p>{prayer.pray_for}</p>
+                            <p>{prayer.title}</p>
+                            <p>{prayer.prayer_type}</p>
+                          </div>
+                        </h5>
+                      </div>
+                    </button>
+                  </div>
                 </h2>
                 <div
                   id={`collapse-prayer-${prayer.id}`}
