@@ -59,7 +59,7 @@ export function PrayersIndex(props) {
           {filteredPrayers.map((prayer) => (
             <div key={prayer.id}>
               <div className="accordion-item">
-                <h2 className="accordion-header" id={`heading-prayer-${prayer.id}`}>
+                <h5 className="accordion-header" id={`heading-prayer-${prayer.id}`}>
                   <div className="card">
                     <button
                       className="accordion-button collapsed"
@@ -79,7 +79,7 @@ export function PrayersIndex(props) {
                       </div>
                     </button>
                   </div>
-                </h2>
+                </h5>
                 <div
                   id={`collapse-prayer-${prayer.id}`}
                   className="accordion-collapse collapse"
