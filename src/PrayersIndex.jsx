@@ -65,7 +65,7 @@ export function PrayersIndex(props) {
                   <h5 className="accordion-header" id={`heading-prayer-${prayer.id}`}>
                     <div className="card">
                       <div className="card-header">
-                        <h5 className="mb-0">
+                        <div className="mb-0">
                           <div className="row row-cols-4 d-flex justify-content-between">
                             <p>{prayer.pray_for}</p>
                             <p>{prayer.title}</p>
@@ -80,7 +80,7 @@ export function PrayersIndex(props) {
                               ></button>
                             </p>
                           </div>
-                        </h5>
+                        </div>
                       </div>
                     </div>
                   </h5>
