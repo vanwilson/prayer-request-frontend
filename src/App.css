@@ -2,15 +2,25 @@
   background-color: #FFF7ED!important;
 }
 
+.accordion {
+  justify-content: left;
+}
+
 .navbar {
-  background-color: #FFF7ED;
+  background-color: #CC8B8C;
 }
 
 .accordion-button {
   background-color: #FFF7ED!important;
 }
 
-.prayers-new {
+.prayers-new form{
   background-color: #FFF7ED;
+  float: right;
+  justify-content: center;
+}
+
+.prayers-new{
+  background-color: transparent;
   float: right;
 }
