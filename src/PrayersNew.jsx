@@ -9,8 +9,10 @@ export function PrayersNew(props) {
 
   return (
     <div id="prayers-new">
-      <h1>New Prayer Request</h1>
-      <div className="prayers-new">
+      <div className="prayers-new w-100 d-flex justify-content-right">
+        <h1>New Prayer Request</h1>
+      </div>
+      <div>
         <form onSubmit={handleSubmit}>
           <div>
             Pray for: <input name="pray_for" type="text" placeholder="Name of person who needs prayer" required />
