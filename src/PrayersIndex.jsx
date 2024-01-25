@@ -45,9 +45,10 @@ export function PrayersIndex(props) {
   return (
     <>
       <div id="prayers-index">
-        <div className="d-flex justify-content-end">
+        <div className="prayers-new">
           <PrayersNew onCreatePrayer={handleCreatePrayer} />
         </div>
+        <br></br>
         <h1 className="d-flex justify-content-center">Prayer Requests</h1>
         <div className="d-flex justify-content-center">
           <select value={selectedPrayerType} onChange={(e) => filterByPrayerType(e.target.value)}>
@@ -57,48 +58,48 @@ export function PrayersIndex(props) {
             })}
           </select>
         </div>
-        <div className="d-flex justify-content-center">
-          <div className="accordion accordion-flush" id="accordionExample">
-            {filteredPrayers.map((prayer) => (
-              <div key={prayer.id}>
-                <div className="accordion-item">
-                  <h5 className="accordion-header" id={`heading-prayer-${prayer.id}`}>
-                    <div className="card">
-                      <div className="card-header">
-                        <div className="mb-0">
-                          <div className="row row-cols-4 d-flex justify-content-between">
-                            <p>{prayer.pray_for}</p>
-                            <p>{prayer.title}</p>
-                            <p>{prayer.prayer_type}</p>
-                            <p>
-                              <button
-                                className="accordion-button collapsed"
-                                data-bs-toggle="collapse"
-                                data-bs-target={`#collapse-prayer-${prayer.id}`}
-                                aria-expanded="false"
-                                aria-controls={`collapse-prayer-${prayer.id}`}
-                              ></button>
-                            </p>
-                          </div>
+        {/* <div className=""> */}
+        <div className="accordion" id="accordionExample">
+          {filteredPrayers.map((prayer) => (
+            <div key={prayer.id}>
+              <div className="accordion-item">
+                <h5 className="accordion-header" id={`heading-prayer-${prayer.id}`}>
+                  <div className="card">
+                    <div className="card-header">
+                      <div className="mb-0">
+                        <div className="row row-cols-4 d-flex justify-content-between">
+                          <p>{prayer.pray_for}</p>
+                          <p>{prayer.title}</p>
+                          <p>{prayer.prayer_type}</p>
+                          <p>
+                            <button
+                              className="accordion-button collapsed"
+                              data-bs-toggle="collapse"
+                              data-bs-target={`#collapse-prayer-${prayer.id}`}
+                              aria-expanded="false"
+                              aria-controls={`collapse-prayer-${prayer.id}`}
+                            ></button>
+                          </p>
                         </div>
                       </div>
                     </div>
-                  </h5>
-                  <div
-                    id={`collapse-prayer-${prayer.id}`}
-                    className="accordion-collapse collapse"
-                    aria-labelledby={`collapse-prayer-${prayer.id}`}
-                    data-bs-parent="#accordionExample"
-                  >
-                    <div className="accordion-body">
-                      <p>{prayer.body}</p>
-                    </div>
+                  </div>
+                </h5>
+                <div
+                  id={`collapse-prayer-${prayer.id}`}
+                  className="accordion-collapse collapse"
+                  aria-labelledby={`collapse-prayer-${prayer.id}`}
+                  data-bs-parent="#accordionExample"
+                >
+                  <div className="accordion-body">
+                    <p>{prayer.body}</p>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
+        {/* </div> */}
       </div>
     </>
   );
