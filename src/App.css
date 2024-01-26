@@ -16,7 +16,8 @@
 
 .prayers-new form{
   background-color: #CC8B8C;
-  float: right;
+  /* float: right; */
+  /* position: fixed; */
 }
 
 .prayers-new{

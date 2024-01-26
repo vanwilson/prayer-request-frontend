@@ -45,7 +45,7 @@ export function PrayersIndex(props) {
   return (
     <>
       <div id="prayers-index">
-        <div className="prayers-new form">
+        <div className="prayers-new form position-sticky top-0 end-0">
           <PrayersNew onCreatePrayer={handleCreatePrayer} />
         </div>
         <br></br>
