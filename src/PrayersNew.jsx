@@ -8,7 +8,7 @@ export function PrayersNew(props) {
   };
 
   return (
-    <div className="prayers-new" id="prayers-new">
+    <div className="prayers-new mx-5" id="prayers-new">
       <div>
         <h1 className="m-4 p-2">New Prayer Request</h1>
       </div>
@@ -26,7 +26,7 @@ export function PrayersNew(props) {
           <div className="p-2">
             Body: <input name="body" type="text" placeholder="Full description" required />
           </div>
-          <div className="d-flex justify-content-center p-2">
+          <div className="d-flex justify-content-center p-2 mb-5">
             <button type="submit">Submit</button>
           </div>
         </form>
