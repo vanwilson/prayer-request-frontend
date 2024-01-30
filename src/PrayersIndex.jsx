@@ -49,9 +49,13 @@ export function PrayersIndex(props) {
           <PrayersNew onCreatePrayer={handleCreatePrayer} />
         </div>
         <div className="all-prayers">
-          <h1 className="d-flex justify-content-center w-75">Prayer Requests</h1>
+          <h1 className="d-flex justify-content-center w-75 pt-3">Prayer Requests</h1>
           <div className="d-flex justify-content-center w-75">
-            <select value={selectedPrayerType} onChange={(e) => filterByPrayerType(e.target.value)}>
+            <select
+              className="mt-2 mb-3"
+              value={selectedPrayerType}
+              onChange={(e) => filterByPrayerType(e.target.value)}
+            >
               <option value="All">All prayer types</option>
               {prayer_types.map((prayer_type) => {
                 return <option key={prayer_type}>{prayer_type}</option>;
