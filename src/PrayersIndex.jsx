@@ -78,9 +78,7 @@ export function PrayersIndex(props) {
                                   data-bs-target={`#collapse-prayer-${prayer.id}`}
                                   aria-expanded="false"
                                   aria-controls={`collapse-prayer-${prayer.id}`}
-                                >
-                                  Full prayer
-                                </button>
+                                ></button>
                               </p>
                             </div>
                           </div>

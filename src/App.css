@@ -14,13 +14,14 @@
   background-color: #CC8B8C;
 }
 
-.accordion-button {
+button {
   background-color: #FFF7ED!important;
 }
 
 .prayers-new form {
   background-color: #CC8B8C;
   height: 100vh;
+  border-radius: 5px;
 }
 
 .prayers-new {
@@ -35,4 +36,8 @@
 .body-box {
   padding-bottom: 150px;
   width: 250px;
+}
+
+footer {
+  background-color: #CC8B8C;
 }
