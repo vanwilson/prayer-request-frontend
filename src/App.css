@@ -18,13 +18,21 @@
   background-color: #FFF7ED!important;
 }
 
-.prayers-new form{
+.prayers-new form {
   background-color: #CC8B8C;
   height: 100vh;
-  /* width: 100vw; */
 }
 
-.prayers-new{
+.prayers-new {
   background-color: transparent;
   float: right;
+}
+
+.text-box {
+  width: 250px;
+}
+
+.body-box {
+  padding-bottom: 150px;
+  width: 250px;
 }
