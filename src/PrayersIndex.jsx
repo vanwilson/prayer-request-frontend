@@ -56,7 +56,7 @@ export function PrayersIndex(props) {
               value={selectedPrayerType}
               onChange={(e) => filterByPrayerType(e.target.value)}
             >
-              <option value="All">All prayer types</option>
+              <option value="All">Prayers</option>
               {prayer_types.map((prayer_type) => {
                 return <option key={prayer_type}>{prayer_type}</option>;
               })}
