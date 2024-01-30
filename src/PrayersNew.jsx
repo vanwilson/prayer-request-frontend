@@ -15,16 +15,16 @@ export function PrayersNew(props) {
       <div className="card m-2">
         <form onSubmit={handleSubmit}>
           <div className="p-2">
-            Pray for: <input name="pray_for" type="text" placeholder="Name of person who needs prayer" required />
+            <input name="pray_for" type="text" placeholder="Pray for" required />
           </div>
           <div className="p-2">
-            Title: <input name="title" type="text" placeholder="7 words or less" required />
+            <input name="title" type="text" placeholder="Title (<7 words)" required />
           </div>
           <div className="p-2">
             Prayer type: <input name="prayer_type" type="text" placeholder="Need, Praise, or Answered" required />
           </div>
           <div className="p-2">
-            Body: <input name="body" type="text" placeholder="Full description" required />
+            <input name="body" type="text" placeholder="Full description" required />
           </div>
           <div className="d-flex justify-content-center p-2 mb-5">
             <button type="submit">Submit</button>

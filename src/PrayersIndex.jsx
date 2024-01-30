@@ -48,7 +48,6 @@ export function PrayersIndex(props) {
         <div className="prayers-new form position-sticky top-0 end-0">
           <PrayersNew onCreatePrayer={handleCreatePrayer} />
         </div>
-        {/* <br></br> */}
         <div className="all-prayers">
           <h1 className="d-flex justify-content-center w-75">Prayer Requests</h1>
           <div className="d-flex justify-content-center w-75">
