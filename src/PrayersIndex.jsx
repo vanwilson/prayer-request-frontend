@@ -48,58 +48,60 @@ export function PrayersIndex(props) {
         <div className="prayers-new form position-sticky top-0 end-0">
           <PrayersNew onCreatePrayer={handleCreatePrayer} />
         </div>
-        <br></br>
-        <h1 className="d-flex justify-content-center w-75">Prayer Requests</h1>
-        <div className="d-flex justify-content-center w-75">
-          <select value={selectedPrayerType} onChange={(e) => filterByPrayerType(e.target.value)}>
-            <option value="All">All prayer types</option>
-            {prayer_types.map((prayer_type) => {
-              return <option key={prayer_type}>{prayer_type}</option>;
-            })}
-          </select>
-        </div>
-        <div className="w-75">
-          <div className="accordion" id="accordionExample">
-            {filteredPrayers.map((prayer) => (
-              <div key={prayer.id}>
-                <div className="accordion-item">
-                  <h5 className="accordion-header" id={`heading-prayer-${prayer.id}`}>
-                    <div className="card">
-                      <div className="card-header">
-                        <div className="mb-0">
-                          <div className="row row-cols-4 d-flex justify-content-between">
-                            <p>{prayer.pray_for}</p>
-                            <p>{prayer.title}</p>
-                            <p>{prayer.prayer_type}</p>
-                            <p>
-                              <button
-                                className="accordion-button collapsed"
-                                data-bs-toggle="collapse"
-                                data-bs-target={`#collapse-prayer-${prayer.id}`}
-                                aria-expanded="false"
-                                aria-controls={`collapse-prayer-${prayer.id}`}
-                              >
-                                Full prayer
-                              </button>
-                            </p>
+        {/* <br></br> */}
+        <div className="all-prayers">
+          <h1 className="d-flex justify-content-center w-75">Prayer Requests</h1>
+          <div className="d-flex justify-content-center w-75">
+            <select value={selectedPrayerType} onChange={(e) => filterByPrayerType(e.target.value)}>
+              <option value="All">All prayer types</option>
+              {prayer_types.map((prayer_type) => {
+                return <option key={prayer_type}>{prayer_type}</option>;
+              })}
+            </select>
+          </div>
+          <div className="w-75">
+            <div className="accordion" id="accordionExample">
+              {filteredPrayers.map((prayer) => (
+                <div key={prayer.id}>
+                  <div className="accordion-item">
+                    <h5 className="accordion-header" id={`heading-prayer-${prayer.id}`}>
+                      <div className="card">
+                        <div className="card-header">
+                          <div className="mb-0">
+                            <div className="row row-cols-4 d-flex justify-content-between">
+                              <p>{prayer.pray_for}</p>
+                              <p>{prayer.title}</p>
+                              <p>{prayer.prayer_type}</p>
+                              <p>
+                                <button
+                                  className="accordion-button collapsed"
+                                  data-bs-toggle="collapse"
+                                  data-bs-target={`#collapse-prayer-${prayer.id}`}
+                                  aria-expanded="false"
+                                  aria-controls={`collapse-prayer-${prayer.id}`}
+                                >
+                                  Full prayer
+                                </button>
+                              </p>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </h5>
-                  <div
-                    id={`collapse-prayer-${prayer.id}`}
-                    className="accordion-collapse collapse"
-                    aria-labelledby={`collapse-prayer-${prayer.id}`}
-                    data-bs-parent="#accordionExample"
-                  >
-                    <div className="accordion-body">
-                      <p>{prayer.body}</p>
+                    </h5>
+                    <div
+                      id={`collapse-prayer-${prayer.id}`}
+                      className="accordion-collapse collapse"
+                      aria-labelledby={`collapse-prayer-${prayer.id}`}
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div className="accordion-body">
+                        <p>{prayer.body}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
