@@ -25,12 +25,6 @@ button {
 
 }
 
-@media screen and (max-width: 600px) {
-  .prayers-index {
-    position: inline!important;
-  }
-}
-
 .prayers-new {
   background-color: transparent;
   float: right;

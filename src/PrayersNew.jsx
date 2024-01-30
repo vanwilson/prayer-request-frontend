@@ -12,13 +12,13 @@ export function PrayersNew(props) {
       <div>
         <h1 className="m-4 p-2">New Prayer Request</h1>
       </div>
-      <div className="card m-2">
+      <div className="card">
         <form onSubmit={handleSubmit}>
           <div className="p-2 d-flex justify-content-center">
-            <input className="text-box" name="pray_for" type="text" placeholder="Pray for (name)" required />
+            <input className="text-box" name="pray_for" type="text" placeholder="Pray for" required />
           </div>
           <div className="p-2 d-flex justify-content-center">
-            <input className="text-box" name="title" type="text" placeholder="Title (<7 words)" required />
+            <input className="text-box" name="title" type="text" placeholder="Title" required />
           </div>
           <div className="p-2 d-flex justify-content-center">
             <input
@@ -32,7 +32,7 @@ export function PrayersNew(props) {
           <div className="p-2 d-flex justify-content-center">
             <input className="body-box" name="body" type="text" placeholder="Full description" required />
           </div>
-          <div className="d-flex justify-content-center p-2 mb-5">
+          <div className="d-flex justify-content-center p-2">
             <button type="submit">Submit</button>
           </div>
         </form>
