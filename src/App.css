@@ -6,8 +6,22 @@
   background-color: #FFF7ED!important;
 }
 
+.prayer-cards {
+  display: flex;
+  justify-content: center;
+}
+
+.prayers-header {
+  display: flex;
+  justify-content: center;
+}
+
+.prayers-menu {
+  display: flex;
+  justify-content: center;
+}
 .accordion {
-  justify-content: left;
+  width: 75%;
 }
 
 .navbar {

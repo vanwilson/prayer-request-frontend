@@ -10,7 +10,7 @@ export function PrayersNew(props) {
   return (
     <div className="prayers-new mx-5" id="prayers-new">
       <div>
-        <h1 className="m-4 p-2">New Prayer Request</h1>
+        <h1 className="my-4 py-2">New Prayer Request</h1>
       </div>
       <div className="card">
         <form onSubmit={handleSubmit}>

@@ -56,8 +56,10 @@ export function PrayersIndex(props) {
           <PrayersNew onCreatePrayer={handleCreatePrayer} />
         </div>
         <div className="all-prayers">
-          <h1 className="d-flex justify-content-center w-75 pt-3">Prayer Requests</h1>
-          <div className="d-flex justify-content-center w-75">
+          <div className="prayers-header">
+            <h1 className="d-flex justify-content-centerw-75 pt-3">Prayer Requests</h1>
+          </div>
+          <div className="prayers-menu">
             <select
               className="mt-2 mb-3"
               value={selectedPrayerType}
@@ -69,7 +71,8 @@ export function PrayersIndex(props) {
               })}
             </select>
           </div>
-          <div className="w-75">
+
+          <div className="prayer-cards">
             <div className="accordion" id="accordionExample">
               {filteredPrayers.map((prayer) => (
                 <div key={prayer.id}>
@@ -78,11 +81,11 @@ export function PrayersIndex(props) {
                       <div className="card">
                         <div className="card-header">
                           <div className="mb-0">
-                            <div className="row row-cols-4 d-flex justify-content-between">
+                            <div className="row row-cols-4">
                               <p>{prayer.pray_for}</p>
                               <p>{prayer.title}</p>
                               <p>{prayer.prayer_type}</p>
-                              <p>
+                              <div>
                                 <button
                                   className="accordion-button collapsed"
                                   data-bs-toggle="collapse"
@@ -90,7 +93,7 @@ export function PrayersIndex(props) {
                                   aria-expanded="false"
                                   aria-controls={`collapse-prayer-${prayer.id}`}
                                 ></button>
-                              </p>
+                              </div>
                             </div>
                           </div>
                         </div>
