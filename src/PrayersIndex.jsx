@@ -8,6 +8,13 @@ export function PrayersIndex(props) {
   const [selectedPrayerType, setSelectedPrayerType] = useState("All");
   const [filteredPrayers, setFilteredPrayers] = useState(props.prayers);
 
+  // const PrayerTypeEnum = {
+  //   All: "All",
+  //   Need: "Need",
+  //   Praise: "Praise",
+  //   Answered: "Answered"
+  // }
+
   const prayer_types = Array.from(new Set(props.prayers.map((prayers) => prayers.prayer_type)));
 
   const filterByPrayerType = (prayer_type) => {
