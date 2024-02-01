@@ -25,7 +25,7 @@ export function PrayersIndex(props) {
 
   useEffect(() => {
     if (selectedPrayerType === "All") {
-      setFilteredPrayers(props.prayers);
+      setFilteredPrayers(props.prayers.reverse());
     } else {
       setFilteredPrayers(
         props.prayers.filter((prayer) => {
