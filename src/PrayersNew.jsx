@@ -33,7 +33,9 @@ export function PrayersNew(props) {
             <input className="body-box" name="body" type="text" placeholder="Full description" required />
           </div>
           <div className="d-flex justify-content-center p-2">
-            <button type="submit">Submit</button>
+            <button type="submit" className="px-2 py-1">
+              Submit
+            </button>
           </div>
         </form>
       </div>

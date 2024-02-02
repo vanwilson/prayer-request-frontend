@@ -41,13 +41,13 @@ input {
 button {
   background-color: #FFF7ED!important;
   padding: 0px!important;
+  border-radius: 5px!important;
 }
 
 .prayers-new form {
   background-color: #CC8B8C;
   height: 100vh;
   border-radius: 5px;
-
 }
 
 .prayers-new {
