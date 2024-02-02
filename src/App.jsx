@@ -7,7 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <div>
+    <div className="d-flex flex-column min-vh-100">
       <BrowserRouter>
         <Header />
         <Content />
