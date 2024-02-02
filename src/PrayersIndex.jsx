@@ -107,8 +107,8 @@ export function PrayersIndex(props) {
                       aria-labelledby={`collapse-prayer-${prayer.id}`}
                       data-bs-parent="#accordionExample"
                     >
-                      <div className="accordion-body">
-                        <p>{prayer.body}</p>
+                      <div className="accordion-body py-0">
+                        <p className="py-2 mb-0">{prayer.body}</p>
                       </div>
                     </div>
                   </div>
