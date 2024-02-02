@@ -26,11 +26,6 @@ export function Header() {
                   Home
                 </a>
               </li>
-              {/* <li className="nav-item">
-                <a className="nav-link active" href="/prayers_answered">
-                  Answered Prayers
-                </a>
-              </li> */}
               <li className="nav-item">
                 <a className="nav-link active" href="/my_prayers">
                   My Prayers
@@ -85,7 +80,6 @@ export function Header() {
           </div>
         </div>
       </nav>
-      {/* <a href="#">Home</a> | <a href="#posts-index">All prayers</a> | <a href="#posts-new">New prayer request</a> */}
     </header>
   );
 }
