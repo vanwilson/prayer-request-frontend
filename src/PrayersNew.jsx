@@ -14,7 +14,7 @@ export function PrayersNew(props) {
       </div>
       <div className="card">
         <form onSubmit={handleSubmit}>
-          <div className="p-2 d-flex justify-content-center">
+          <div className="pt-4 pb-2 d-flex justify-content-center">
             <input className="text-box" name="pray_for" type="text" placeholder="Pray for" required />
           </div>
           <div className="p-2 d-flex justify-content-center">
