@@ -11,6 +11,12 @@
   justify-content: center;
 }
 
+input {
+  background-color: #FFF7ED;
+  border-color: #CC8B8C;
+  border-radius: 5px;
+}
+
 .prayers-header {
   display: flex;
   justify-content: center;
