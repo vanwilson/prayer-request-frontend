@@ -9,7 +9,7 @@ export function Header() {
             Prayer
           </a>
           <button
-            className="navbar-toggler"
+            className="navbar-toggler px-2 py-1"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
