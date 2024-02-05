@@ -31,7 +31,7 @@ export function Signup() {
       </ul>
       <div className="signup-form d-flex justify-content-center">
         <form onSubmit={handleSubmit}>
-          <div>
+          <div className="mt-4">
             <input className="text-box" name="name" type="text" placeholder="First Name" />
           </div>
           <div>
