@@ -3,7 +3,7 @@ import { Login } from "./Login";
 
 export function Home() {
   return (
-    <div id="home">
+    <div id="home" className="all-prayers">
       <div className="signup-header">
         <Signup />
       </div>

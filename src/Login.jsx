@@ -30,7 +30,7 @@ export function Login() {
 
   return (
     <div className="prayers-new mx-5" id="login">
-      <h1 className="my-4 py-2">Login</h1>
+      <h1 className="d-flex justify-content-center my-4 py-2">Login</h1>
       <ul>
         {errors.map((error) => (
           <li key={error}>{error}</li>
