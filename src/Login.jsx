@@ -39,10 +39,10 @@ export function Login() {
       <div className="card">
         <form onSubmit={handleSubmit}>
           <div className="pt-4 pb-2 d-flex justify-content-center">
-            <input name="email" type="email" placeholder="Email" />
+            <input className="text-box" name="email" type="email" placeholder="Email" />
           </div>
           <div className="pt-4 pb-2 d-flex justify-content-center">
-            <input name="password" type="password" placeholder="Password" />
+            <input className="text-box" name="password" type="password" placeholder="Password" />
           </div>
           <div className="d-flex justify-content-center p-2">
             <button type="submit">Login</button>
