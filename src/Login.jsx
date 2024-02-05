@@ -29,27 +29,31 @@ export function Login() {
   };
 
   return (
-    <div className="prayers-new mx-5" id="login">
-      <h1 className="d-flex justify-content-center my-4 py-2">Login</h1>
-      <ul>
-        {errors.map((error) => (
-          <li key={error}>{error}</li>
-        ))}
-      </ul>
-      <div className="card">
-        <form onSubmit={handleSubmit}>
-          <div className="pt-4 pb-2 d-flex justify-content-center">
-            <input className="text-box" name="email" type="email" placeholder="Email" />
+    <div className="login-container">
+      <div className="prayers-new form sticky-xl-top sticky-lg-top sticky-md-top">
+        <div className="prayers-new mx-5" id="prayers-new">
+          <h1 className="d-flex justify-content-center my-4 py-2">Login</h1>
+          <ul>
+            {errors.map((error) => (
+              <li key={error}>{error}</li>
+            ))}
+          </ul>
+          <div className="card">
+            <form onSubmit={handleSubmit}>
+              <div className="pt-4 pb-2 d-flex justify-content-center">
+                <input className="text-box" name="email" type="email" placeholder="Email" />
+              </div>
+              <div className="pt-4 pb-2 d-flex justify-content-center">
+                <input className="text-box" name="password" type="password" placeholder="Password" />
+              </div>
+              <div className="d-flex justify-content-center p-2">
+                <button type="submit" className="px-2 py-1">
+                  Login
+                </button>
+              </div>
+            </form>
           </div>
-          <div className="pt-4 pb-2 d-flex justify-content-center">
-            <input className="text-box" name="password" type="password" placeholder="Password" />
-          </div>
-          <div className="d-flex justify-content-center p-2">
-            <button type="submit" className="px-2 py-1">
-              Login
-            </button>
-          </div>
-        </form>
+        </div>
       </div>
     </div>
   );
