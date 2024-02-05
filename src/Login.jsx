@@ -45,7 +45,9 @@ export function Login() {
             <input className="text-box" name="password" type="password" placeholder="Password" />
           </div>
           <div className="d-flex justify-content-center p-2">
-            <button type="submit">Login</button>
+            <button type="submit" className="px-2 py-1">
+              Login
+            </button>
           </div>
         </form>
       </div>

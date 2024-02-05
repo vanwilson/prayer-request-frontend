@@ -23,7 +23,7 @@ export function Signup() {
 
   return (
     <div className="" id="signup">
-      <h1>Signup</h1>
+      <h1 className="d-flex justify-content-center pt-3">Signup</h1>
       <ul>
         {errors.map((error) => (
           <li key={error}>{error}</li>
@@ -31,21 +31,30 @@ export function Signup() {
       </ul>
       <form onSubmit={handleSubmit}>
         <div>
-          First Name: <input name="name" type="text" />
+          <input className="text-box" name="name" type="text" placeholder="First Name" />
         </div>
         <div>
-          Last Name: <input name="name" type="text" />
+          <input className="text-box" name="name" type="text" placeholder="Last Name" />
         </div>
         <div>
-          Email: <input name="email" type="email" />
+          <input className="text-box" name="email" type="email" placeholder="Email" />
         </div>
         <div>
-          Password: <input name="password" type="password" />
+          <input className="text-box" name="password" type="password" placeholder="Password" />
         </div>
         <div>
-          Password confirmation: <input name="password_confirmation" type="password" />
+          <input
+            className="text-box"
+            name="password_confirmation"
+            type="password"
+            placeholder="Password confirmation"
+          />
         </div>
-        <button type="submit">Signup</button>
+        <div className="d-flex justify-content-center p-2">
+          <button type="submit" className="px-2 py-1">
+            Signup
+          </button>
+        </div>
       </form>
     </div>
   );
