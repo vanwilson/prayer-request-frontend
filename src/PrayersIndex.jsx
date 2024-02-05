@@ -57,7 +57,7 @@ export function PrayersIndex(props) {
         </div>
         <div className="all-prayers">
           <div className="prayers-header">
-            <h1 className="d-flex justify-content-centerw-75 pt-3">Prayer Requests</h1>
+            <h1 className="pt-3">Prayer Requests</h1>
           </div>
           <div className="prayers-menu">
             <select

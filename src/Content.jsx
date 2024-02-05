@@ -46,7 +46,7 @@ export function Content() {
   useEffect(handleIndexPrayers, []);
 
   return (
-    <div>
+    <div id="content">
       <Modal show={isPrayerShowVisible} onClose={handleClose}>
         <PrayerShow prayer={currentPrayer} onUpdatePrayer={handleUpdatePrayer} />
       </Modal>

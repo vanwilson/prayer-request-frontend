@@ -3,9 +3,13 @@ import { Login } from "./Login";
 
 export function Home() {
   return (
-    <div>
-      <Signup />
-      <Login />
+    <div id="home">
+      <div className="signup-header">
+        <Signup />
+      </div>
+      <div className="prayers-new form sticky-xl-top sticky-lg-top sticky-md-top">
+        <Login />
+      </div>
     </div>
   );
 }
