@@ -29,7 +29,7 @@ export function Signup() {
           <li key={error}>{error}</li>
         ))}
       </ul>
-      <div className="signup-form">
+      <div className="signup-form d-flex justify-content-center">
         <form onSubmit={handleSubmit}>
           <div>
             <input className="text-box" name="name" type="text" placeholder="First Name" />
