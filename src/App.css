@@ -79,6 +79,10 @@ button {
   float: right;
 }
 
+.login-form {
+  background-color: transparent;
+}
+
 .text-box {
   width: 250px;
 }
