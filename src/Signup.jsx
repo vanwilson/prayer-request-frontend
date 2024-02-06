@@ -29,21 +29,21 @@ export function Signup() {
           <li key={error}>{error}</li>
         ))}
       </ul>
-      <div className="signup-form d-flex justify-content-center">
+      <div className="signup-form d-flex justify-content-center border border-dark">
         <form onSubmit={handleSubmit}>
           <div className="mt-4">
             <input className="text-box" name="name" type="text" placeholder="First Name" />
           </div>
-          <div>
+          <div className="mt-2">
             <input className="text-box" name="name" type="text" placeholder="Last Name" />
           </div>
-          <div>
+          <div className="mt-2">
             <input className="text-box" name="email" type="email" placeholder="Email" />
           </div>
-          <div>
+          <div className="mt-2">
             <input className="text-box" name="password" type="password" placeholder="Password" />
           </div>
-          <div>
+          <div className="mt-2">
             <input
               className="text-box"
               name="password_confirmation"
@@ -51,7 +51,7 @@ export function Signup() {
               placeholder="Password confirmation"
             />
           </div>
-          <div className="d-flex justify-content-center p-2">
+          <div className="d-flex justify-content-center mt-2">
             <button type="submit" className="px-2 py-1">
               Signup
             </button>

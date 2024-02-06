@@ -38,15 +38,15 @@ export function Login() {
               <li key={error}>{error}</li>
             ))}
           </ul>
-          <div className="signup-form d-flex justify-content-center">
+          <div className="signup-form d-flex justify-content-center border border-dark">
             <form onSubmit={handleSubmit}>
-              <div className="pt-4 pb-2 mx-5 d-flex justify-content-center">
+              <div className="mt-4 mx-5">
                 <input className="text-box" name="email" type="email" placeholder="Email" />
               </div>
-              <div className="pt-4 pb-2 d-flex justify-content-center">
+              <div className="mt-2 d-flex justify-content-center">
                 <input className="text-box" name="password" type="password" placeholder="Password" />
               </div>
-              <div className="d-flex justify-content-center p-2">
+              <div className="d-flex justify-content-center mt-2">
                 <button type="submit" className="px-2 py-1">
                   Login
                 </button>
