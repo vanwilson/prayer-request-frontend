@@ -10,11 +10,11 @@ export function PrayersNew(props) {
   return (
     <div className="prayers-new mx-5" id="prayers-new">
       <div>
-        <h1 className="m-4 p-2">New Prayer Request</h1>
+        <h1 className="my-4 py-2">New Prayer Request</h1>
       </div>
-      <div className="card">
+      <div className="card border border-dark">
         <form onSubmit={handleSubmit}>
-          <div className="p-2 d-flex justify-content-center">
+          <div className="pt-4 pb-2 d-flex justify-content-center">
             <input className="text-box" name="pray_for" type="text" placeholder="Pray for" required />
           </div>
           <div className="p-2 d-flex justify-content-center">
@@ -33,7 +33,9 @@ export function PrayersNew(props) {
             <input className="body-box" name="body" type="text" placeholder="Full description" required />
           </div>
           <div className="d-flex justify-content-center p-2">
-            <button type="submit">Submit</button>
+            <button type="submit" className="px-2 py-1">
+              Submit
+            </button>
           </div>
         </form>
       </div>

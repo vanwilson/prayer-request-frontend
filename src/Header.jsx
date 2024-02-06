@@ -2,14 +2,14 @@ import { LogoutLink } from "./LogoutLink";
 
 export function Header() {
   return (
-    <header>
+    <header className="border border-dark">
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
           <a className="navbar-brand" href="/prayers">
             Prayer
           </a>
           <button
-            className="navbar-toggler"
+            className="navbar-toggler px-2 py-1 border border-dark"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -26,11 +26,6 @@ export function Header() {
                   Home
                 </a>
               </li>
-              {/* <li className="nav-item">
-                <a className="nav-link active" href="/prayers_answered">
-                  Answered Prayers
-                </a>
-              </li> */}
               <li className="nav-item">
                 <a className="nav-link active" href="/my_prayers">
                   My Prayers
@@ -85,7 +80,6 @@ export function Header() {
           </div>
         </div>
       </nav>
-      {/* <a href="#">Home</a> | <a href="#posts-index">All prayers</a> | <a href="#posts-new">New prayer request</a> */}
     </header>
   );
 }

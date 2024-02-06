@@ -1,13 +1,61 @@
+body {
+  background-image: url("https://img.freepik.com/free-photo/close-up-white-marble-textured-wall_53876-139849.jpg")!important;
+}
+
+#home {
+  column-count: 2;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
 .all-prayers {
   max-width: 1500px;
   margin: auto;
 }
+
 .card-header {
   background-color: #FFF7ED!important;
 }
 
+.prayer-cards {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  background-color: #FFF7ED;
+  border-color: #CC8B8C;
+  border-radius: 5px;
+}
+
+.signup {
+  display: flex;
+  justify-content: center;
+  width: 75%;
+}
+
+.signup-form {
+  background-color: #CC8B8C;
+  height: 100vh;
+  border-radius: 5px;
+}
+
+.prayers-header {
+  display: flex;
+  justify-content: center;
+}
+
+.prayers-menu {
+  display: flex;
+  justify-content: center;
+}
+
 .accordion {
-  justify-content: left;
+  width: 75%;
+}
+
+.accordion-body {
+  background-color: #CC8B8C;
 }
 
 .navbar {
@@ -16,18 +64,23 @@
 
 button {
   background-color: #FFF7ED!important;
+  padding: 0px!important;
+  border-radius: 5px!important;
 }
 
 .prayers-new form {
   background-color: #CC8B8C;
   height: 100vh;
   border-radius: 5px;
-
 }
 
 .prayers-new {
   background-color: transparent;
   float: right;
+}
+
+.login-form {
+  background-color: transparent;
 }
 
 .text-box {
@@ -41,4 +94,5 @@ button {
 
 footer {
   background-color: #CC8B8C;
+  border-radius: 5px;
 }

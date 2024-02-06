@@ -3,7 +3,7 @@ import { Login } from "./Login";
 
 export function Home() {
   return (
-    <div>
+    <div id="home">
       <Signup />
       <Login />
     </div>

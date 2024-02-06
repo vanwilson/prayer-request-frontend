@@ -29,22 +29,32 @@ export function Login() {
   };
 
   return (
-    <div id="login">
-      <h1>Login</h1>
-      <ul>
-        {errors.map((error) => (
-          <li key={error}>{error}</li>
-        ))}
-      </ul>
-      <form onSubmit={handleSubmit}>
-        <div>
-          Email: <input name="email" type="email" />
+    <div className="login-container">
+      <div className="prayers-new form sticky-xl-top sticky-lg-top sticky-md-top">
+        <div className="login-form">
+          <h1 className="d-flex justify-content-center pt-3">Login</h1>
+          <ul>
+            {errors.map((error) => (
+              <li key={error}>{error}</li>
+            ))}
+          </ul>
+          <div className="signup-form d-flex justify-content-center border border-dark">
+            <form onSubmit={handleSubmit}>
+              <div className="mt-4 mx-5">
+                <input className="text-box" name="email" type="email" placeholder="Email" />
+              </div>
+              <div className="mt-2 d-flex justify-content-center">
+                <input className="text-box" name="password" type="password" placeholder="Password" />
+              </div>
+              <div className="d-flex justify-content-center mt-2">
+                <button type="submit" className="px-2 py-1">
+                  Login
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-        <div>
-          Password: <input name="password" type="password" />
-        </div>
-        <button type="submit">Login</button>
-      </form>
+      </div>
     </div>
   );
 }
