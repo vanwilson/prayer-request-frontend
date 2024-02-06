@@ -38,7 +38,7 @@ export function Login() {
               <li key={error}>{error}</li>
             ))}
           </ul>
-          <div className="card">
+          <div className="signup-form d-flex justify-content-center">
             <form onSubmit={handleSubmit}>
               <div className="pt-4 pb-2 mx-5 d-flex justify-content-center">
                 <input className="text-box" name="email" type="email" placeholder="Email" />
