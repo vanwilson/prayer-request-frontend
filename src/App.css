@@ -1,5 +1,7 @@
 body {
   background-image: url("https://img.freepik.com/free-photo/close-up-white-marble-textured-wall_53876-139849.jpg")!important;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 #home {
