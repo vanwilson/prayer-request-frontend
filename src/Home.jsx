@@ -3,13 +3,9 @@ import { Login } from "./Login";
 
 export function Home() {
   return (
-    <div id="home">
-      <div>
-        <Signup />
-      </div>
-      <div>
-        <Login />
-      </div>
+    <div id="home" className="d-flex justify-content-center">
+      <Signup />
+      <Login />
     </div>
   );
 }

@@ -7,12 +7,26 @@ body {
 #home {
   display: flex;
   flex-direction: row;
-  column-count: 2;
-  margin-left: 15%;
-  margin-right: 15%;
   @media (max-width: 800px) {
     flex-direction: column;
+    /* margin-left: 10%;
+    margin-right: 10%; */
+    width: 100%;
   }
+}
+
+.signup-form {
+  background-color: #CC8B8C;
+  height: 76vh;
+  border-radius: 5px;
+  margin-right: 5%;
+}
+
+.login-form {
+  background-color: #CC8B8C;
+  /* height: 100vh; */
+  border-radius: 5px;
+  margin-left: 5%;
 }
 
 .all-prayers {
@@ -32,18 +46,6 @@ body {
 input {
   background-color: #FFF7ED;
   border-color: #CC8B8C;
-  border-radius: 5px;
-}
-
-.signup {
-  display: flex;
-  justify-content: center;
-  width: 75%;
-}
-
-.signup-form {
-  background-color: #CC8B8C;
-  height: 100vh;
   border-radius: 5px;
 }
 
@@ -86,14 +88,10 @@ button {
   float: right;
 }
 
-.login-form {
-  background-color: #CC8B8C;
-  height: 100vh;
-  border-radius: 5px!important;
-}
-
 .text-box {
   width: 250px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .body-box {
