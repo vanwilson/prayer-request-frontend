@@ -30,7 +30,7 @@ export function Login() {
 
   return (
     <div className="login-container">
-      <div className="prayers-new form sticky-xl-top sticky-lg-top sticky-md-top">
+      <div className="prayers-new form">
         <div className="login-form">
           <h1 className="d-flex justify-content-center pt-3">Login</h1>
           <ul>

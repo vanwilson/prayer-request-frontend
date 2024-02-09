@@ -5,9 +5,14 @@ body {
 }
 
 #home {
+  display: flex;
+  flex-direction: row;
   column-count: 2;
   margin-left: 15%;
   margin-right: 15%;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
 }
 
 .all-prayers {
