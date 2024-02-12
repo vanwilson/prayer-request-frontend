@@ -3,9 +3,15 @@ import { Login } from "./Login";
 
 export function Home() {
   return (
-    <div id="home">
-      <Signup />
-      <Login />
+    <div id="home" className="row">
+      <div className="col-1"></div>
+      <div className="col-5">
+        <Signup />
+      </div>
+      <div className="col-5">
+        <Login />
+      </div>
+      <div className="col-1"></div>
     </div>
   );
 }
