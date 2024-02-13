@@ -32,24 +32,19 @@ export function Signup() {
       <div className="signup-form d-flex justify-content-center border border-dark">
         <form onSubmit={handleSubmit}>
           <div className="mt-4 mx-5">
-            <input className="text-box" name="name" type="text" placeholder="First Name" />
+            <input name="name" type="text" placeholder="First Name" />
           </div>
           <div className="mt-2 mx-5">
-            <input className="text-box" name="name" type="text" placeholder="Last Name" />
+            <input name="name" type="text" placeholder="Last Name" />
           </div>
           <div className="mt-2 mx-5">
-            <input className="text-box" name="email" type="email" placeholder="Email" />
+            <input name="email" type="email" placeholder="Email" />
           </div>
           <div className="mt-2 mx-5">
-            <input className="text-box" name="password" type="password" placeholder="Password" />
+            <input name="password" type="password" placeholder="Password" />
           </div>
           <div className="mt-2 mx-5">
-            <input
-              className="text-box"
-              name="password_confirmation"
-              type="password"
-              placeholder="Password confirmation"
-            />
+            <input name="password_confirmation" type="password" placeholder="Password confirmation" />
           </div>
           <div className="d-flex justify-content-center mt-2">
             <button type="submit" className="px-2 py-1">
