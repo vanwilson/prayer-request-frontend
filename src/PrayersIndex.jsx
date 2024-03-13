@@ -53,14 +53,11 @@ export function PrayersIndex(props) {
     <>
       <div id="prayers-index">
         <div className="row">
-          <div className="prayers-new form sticky-xl-top sticky-lg-top sticky-md-top">
-            <PrayersNew onCreatePrayer={handleCreatePrayer} />
-          </div>
           <div className="all-prayers">
-            <div className="prayers-header">
+            <div className="prayers-header col-l-8">
               <h1 className="pt-3">Prayer Requests</h1>
             </div>
-            <div className="prayers-menu">
+            <div className="prayers-menu col-l-8">
               <select
                 className="mt-2 mb-3"
                 value={selectedPrayerType}
@@ -73,7 +70,10 @@ export function PrayersIndex(props) {
               </select>
             </div>
 
-            <div className="prayer-cards">
+            <div className="prayers-new form sticky-xl-top sticky-lg-top sticky-md-top">
+              <PrayersNew onCreatePrayer={handleCreatePrayer} />
+            </div>
+            <div className="prayer-cards col-l-8">
               <div className="accordion" id="accordionExample">
                 {filteredPrayers.map((prayer) => (
                   <div key={prayer.id}>

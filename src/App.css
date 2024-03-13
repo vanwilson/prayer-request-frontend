@@ -68,8 +68,8 @@ body {
 }
 
 .all-prayers {
-  max-width: 1500px;
-  margin: auto;
+  /* max-width: 1500px; */
+  /* margin: auto; */
 }
 
 .card-header {
