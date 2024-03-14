@@ -69,10 +69,6 @@ export function PrayersIndex(props) {
                 })}
               </select>
             </div>
-
-            <div className="prayers-new form sticky-xl-top sticky-lg-top sticky-md-top">
-              <PrayersNew onCreatePrayer={handleCreatePrayer} />
-            </div>
             <div className="prayer-cards col-l-8">
               <div className="accordion" id="accordionExample">
                 {filteredPrayers.map((prayer) => (
@@ -116,6 +112,9 @@ export function PrayersIndex(props) {
                   </div>
                 ))}
               </div>
+            </div>
+            <div className="prayers-new form sticky-xl-top sticky-lg-top sticky-md-top">
+              <PrayersNew onCreatePrayer={handleCreatePrayer} />
             </div>
           </div>
         </div>
