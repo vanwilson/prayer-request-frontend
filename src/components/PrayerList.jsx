@@ -34,7 +34,7 @@ export function PrayerList(props) {
   };
 
   return (
-    <div className="col-12 col-l-8">
+    <div className="col-l-8">
       <div className="prayers-header">
         <h1 className="pt-3">Prayer Requests</h1>
       </div>
