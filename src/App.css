@@ -8,8 +8,24 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
+h5, p {
+  font-size: 12px!important;
+}
+
+@media only screen and (min-width: 426px) {
+  h5, p {
+    font-size: 14px!important;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  h5, p {
+    font-size: 16px!important;
+  }
+}
 
 .row::after {
   content: "";
