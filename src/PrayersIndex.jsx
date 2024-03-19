@@ -18,7 +18,7 @@ export function PrayersIndex(props) {
     <>
       <div id="prayers-index">
         <PrayerList prayers={props.prayers} setPrayers={setPrayers} />
-        <div className="prayers-new form sticky-xl-top sticky-lg-top sticky-md-top">
+        <div className="prayers-new form sticky-xl-top sticky-lg-top sticky-md-top col-l-4">
           <PrayersNew onCreatePrayer={handleCreatePrayer} />
         </div>
       </div>
