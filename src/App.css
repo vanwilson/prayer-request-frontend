@@ -102,14 +102,8 @@ button {
   border-radius: 5px!important;
 }
 
-.prayers-new form {
-  background-color: #CC8B8C;
-  border-radius: 5px;
-}
-
 .prayers-new {
-  background-color: transparent;
-  float: right;
+  background-color: #CC8B8C!important;
 }
 
 .body-box {
