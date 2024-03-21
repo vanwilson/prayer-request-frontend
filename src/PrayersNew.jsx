@@ -10,7 +10,7 @@ export function PrayersNew(props) {
   return (
     <div className="prayers-new-form col-l-4" id="prayers-new">
       <div>
-        <h1 className="my-2 py-2">New Prayer Request</h1>
+        <h1 className="prayers-new-header my-2 py-2">New Prayer Request</h1>
       </div>
       <div className="prayers-new card border border-dark col-l-12">
         <form onSubmit={handleSubmit}>

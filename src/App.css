@@ -95,6 +95,10 @@ input {
   justify-content: center;
 }
 
+h1.prayers-new-header.my-2.py-2 {
+  text-align: center;
+}
+
 .prayers-menu {
   display: flex;
   justify-content: center;

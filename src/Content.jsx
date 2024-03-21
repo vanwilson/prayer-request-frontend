@@ -9,18 +9,31 @@ import { Home } from "./Home";
 
 export function Content() {
   const [prayers, setPrayers] = useState([]);
+  const [myPrayers, setMyPrayers] = useState([]);
   const [isPrayerShowVisible, setIsPrayerShowVisible] = useState(false);
   const [currentPrayer, setCurrentPrayer] = useState({});
 
   const handleIndexPrayers = () => {
     axios.get("http://localhost:3000/prayers.json").then((response) => {
       setPrayers(response.data);
+      setMyPrayers(filterMyPrayers(response.data));
     });
   };
 
   const handleShowPrayer = (prayer) => {
     setIsPrayerShowVisible(true);
     setCurrentPrayer(prayer);
+  };
+
+  const filterMyPrayers = (prayers) => {
+    const user_id = localStorage.getItem("user_id");
+    const myFilteredPrayers = prayers.filter((prayer) => {
+      if (prayer.user_id == user_id) {
+        console.log(prayer);
+        return prayer;
+      }
+    });
+    return myFilteredPrayers;
   };
 
   const handleUpdatePrayer = (id, params, successCallback) => {
@@ -53,7 +66,7 @@ export function Content() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Prayers" element={<PrayersIndex prayers={prayers} onShowPrayer={handleShowPrayer} />} />
-        <Route path="/my_prayers" element={<MyPrayers prayers={prayers} onShowPrayer={handleShowPrayer} />} />
+        <Route path="/my_prayers" element={<MyPrayers myPrayers={myPrayers} onShowPrayer={handleShowPrayer} />} />
       </Routes>
     </div>
   );
