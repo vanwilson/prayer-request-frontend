@@ -65,7 +65,7 @@ export function Content() {
       </Modal>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Prayers" element={<PrayersIndex prayers={prayers} onShowPrayer={handleShowPrayer} />} />
+        <Route path="/Prayers" element={<PrayersIndex prayersProp={prayers} />} />
         <Route path="/my_prayers" element={<MyPrayers myPrayers={myPrayers} onShowPrayer={handleShowPrayer} />} />
       </Routes>
     </div>
