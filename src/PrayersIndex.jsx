@@ -17,7 +17,7 @@ export function PrayersIndex({ prayersProp }) {
   return (
     <>
       <div id="prayers-index">
-        <PrayerList prayers={prayersProp} setPrayers={setPrayers} />
+        <PrayerList prayers={prayersProp} setPrayers={setPrayers} isLoggedInUserPrayers={false} />
         <PrayersNew onCreatePrayer={handleCreatePrayer} />
       </div>
     </>

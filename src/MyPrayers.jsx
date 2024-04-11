@@ -5,7 +5,7 @@ export function MyPrayers(props) {
   return (
     <div id="my-prayers">
       <h1>My Prayers</h1>
-      <PrayerList prayers={props.myPrayers} />
+      <PrayerList prayers={props.myPrayers} isLoggedInUserPrayers={true} />
     </div>
   );
 }

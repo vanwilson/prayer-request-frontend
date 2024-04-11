@@ -1,10 +1,13 @@
 /* eslint-disable react/prop-types */
+import { PrayerShow } from "../PrayerShow";
 import { useState, useEffect } from "react";
 
 export function PrayerList(props) {
   console.log(props.prayers);
   const [selectedPrayerType, setSelectedPrayerType] = useState("All");
   const [filteredPrayers, setFilteredPrayers] = useState(props.prayers);
+  const [isEditFormOpen, setIsEditFormOpen] = useState(false);
+  const [selectedPrayer, setSelectedPrayer] = useState(null);
 
   useEffect(() => {
     if (selectedPrayerType === "All") {
@@ -81,6 +84,16 @@ export function PrayerList(props) {
                 >
                   <div className="accordion-body py-0">
                     <p className="py-2 mb-0">{prayer.body}</p>
+                    {props.isLoggedInUserPrayers ? (
+                      <button
+                        onClick={() => {
+                          setSelectedPrayer(prayer);
+                          setIsEditFormOpen(!isEditFormOpen);
+                        }}
+                      >
+                        edit
+                      </button>
+                    ) : null}
                   </div>
                 </div>
               </div>
@@ -88,6 +101,7 @@ export function PrayerList(props) {
           ))}
         </div>
       </div>
+      {isEditFormOpen ? <PrayerShow prayer={selectedPrayer} /> : null}
     </div>
   );
 }
