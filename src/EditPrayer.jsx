@@ -5,11 +5,11 @@ export function EditPrayer(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     const params = new FormData(event.target);
-    handleUpdatePrayer(props.prayer.id, params, () => event.target.reset());
+    handleUpdatePrayer(props.prayer.id, params);
     window.location.href = "/my_prayers";
   };
 
-  const handleUpdatePrayer = (id, params, successCallback) => {
+  const handleUpdatePrayer = (id, params) => {
     axios.patch(`http://localhost:3000/prayers/${id}.json`, params);
   };
 

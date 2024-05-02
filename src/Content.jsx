@@ -44,9 +44,6 @@ export function Content() {
 
   return (
     <div className="content">
-      <Modal show={isPrayerShowVisible} onClose={handleClose}>
-        <EditPrayer prayer={currentPrayer} />
-      </Modal>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Prayers" element={<PrayersIndex prayersProp={prayers} />} />
