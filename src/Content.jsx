@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { PrayersIndex } from "./PrayersIndex";
 import { Modal } from "./Modal";
-import { PrayerShow } from "./PrayerShow";
+import { EditPrayer } from "./EditPrayer";
 import { MyPrayers } from "./MyPrayers";
 import { Home } from "./Home";
 
@@ -36,22 +36,6 @@ export function Content() {
     return myFilteredPrayers;
   };
 
-  const handleUpdatePrayer = (id, params, successCallback) => {
-    axios.patch(`http://localhost:3000/prayers/${id}.json`, params).then((response) => {
-      setPrayers(
-        prayers.map((prayer) => {
-          if (prayer.id === response.data.id) {
-            return response.data;
-          } else {
-            return prayer;
-          }
-        })
-      );
-      successCallback();
-      handleClose();
-    });
-  };
-
   const handleClose = () => {
     setIsPrayerShowVisible(false);
   };
@@ -61,7 +45,7 @@ export function Content() {
   return (
     <div className="content">
       <Modal show={isPrayerShowVisible} onClose={handleClose}>
-        <PrayerShow prayer={currentPrayer} onUpdatePrayer={handleUpdatePrayer} />
+        <EditPrayer prayer={currentPrayer} />
       </Modal>
       <Routes>
         <Route path="/" element={<Home />} />

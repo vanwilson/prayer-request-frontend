@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { PrayerShow } from "../PrayerShow";
+import { EditPrayer } from "../EditPrayer";
 import { useState, useEffect } from "react";
 
 export function PrayerList(props) {
@@ -101,7 +101,7 @@ export function PrayerList(props) {
           ))}
         </div>
       </div>
-      {isEditFormOpen ? <PrayerShow prayer={selectedPrayer} /> : null}
+      {isEditFormOpen ? <EditPrayer prayer={selectedPrayer} /> : null}
     </div>
   );
 }

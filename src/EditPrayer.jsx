@@ -1,10 +1,16 @@
 /* eslint-disable react/prop-types */
-export function PrayerShow(props) {
+import axios from "axios";
+
+export function EditPrayer(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     const params = new FormData(event.target);
-    props.onUpdatePrayer(props.prayer.id, params, () => event.target.reset());
+    handleUpdatePrayer(props.prayer.id, params, () => event.target.reset());
     window.location.href = "/my_prayers";
+  };
+
+  const handleUpdatePrayer = (id, params, successCallback) => {
+    axios.patch(`http://localhost:3000/prayers/${id}.json`, params);
   };
 
   return (
