@@ -14,7 +14,7 @@ export function EditPrayer(props) {
   };
 
   return (
-    <div>
+    <div className="prayers-new-form col-l-4" id="prayers-new">
       <h1>Edit Prayer</h1>
       <form onSubmit={handleSubmit}>
         <div>
